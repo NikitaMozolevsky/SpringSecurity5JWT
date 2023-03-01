@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Registration</h2>
+
+    <form th:method="POST" th:action="@{/process_login}"
+          th:object="${user}" class="login-container">
+        <!--_csrf передается автоматически !!!-->
+        <input type="hidden" th:name="${_csrf.parameterName}"
+            th:value="${_csrf.token}"/> <!--name - key, в остальных случаях
+            отправка автоматическая-->
+
+        <p><!--"name" - именно username - для SS-->
+            <input type="text" name="username" placeholder="Username" th:field="*{username}" id="username">
+        <div style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</div>
+        </p>
+
+        <p><!--"name" - именно password - для SS-->
+            <input type="password" placeholder="Password"
+                  th:field="*{password}" id="password">
+        <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div></p>
+
+        <p><input type="submit" value="Register"></p>
+
+        <div th:if="${param.error}" style="color: red">
+            Incorrect username or password
+        </div>
+    </form>
+</div>
+</body>
+</html>

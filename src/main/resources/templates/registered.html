@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/registered.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/registered.css">
+    <title>Registered</title>
+</head>
+<body>
+
+<p class="header_buttons_border">
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Profile
+        </a>
+    </button>
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Top 10
+        </a>
+    </button>
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Flop 10
+        </a>
+    </button>
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Last
+        </a>
+    </button>
+</p>
+
+<div style="display: flex">
+
+    <div class="fieldset_random_quote">
+        <p class="quote_text">
+            Random quote
+        </p>
+    </div>
+
+    <div class="fieldset_profile">
+        <a style="position: relative; left: 10px">Hello "Login" !</a>
+        <div class="fieldset_profile_last_votes">
+            <div class="second_fieldset_profile_last_votes">
+                <a>&nbsp;&nbsp;Last 3 votes (all votes count = [[${all_votes_number}]])</a>
+                <br><br>
+                <a>Quote 1Quote 1Quote 1Quote 1Quote 1Quote 1Quote 1Quote 1Quote 1</a><br><br>
+                <a>Quote 2</a><br><br>
+                <a>Quote 3Quote 3Quote 3Quote 3Quote 3Quote 3Quote 3Quote 3Quote 3Quote 3</a><br><br>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:each="quote : ${quotes}">
+    <div class="fieldset_number_quote">
+        <!--<a style="font-size: 10px;" th:text="Top ${quote.getPlace()} quote - Score"></a>-->
+        <a style="font-size: 15px; vertical-align: sub">
+            &nbsp;&nbsp;&nbsp;&nbsp;Top 1 quote - Score<br>
+        </a>
+        <!--a href="#" style="font-size: 15px; position: absolute; left: 550px; bottom: 400px">posted by Login</a>-->
+        <a href="#" style="font-size: 15px; position: relative; left: 550px; top: 10px">posted by Login</a>
+
+        <div style="display: flex">
+            <button class="plus_minus_button"><a>+</a></button>
+            <button class="plus_minus_button"><a>-</a></button>
+        </div>
+    </div>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/unregistered.css">
+    <link rel="stylesheet" href="../static/css/unregistered.css">
+    <title>Unregistered</title>
+</head>
+<body>
+
+<p class="header_buttons_border">
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Profile
+        </a>
+    </button>
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Top 10
+        </a>
+    </button>
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Flop 10
+        </a>
+    </button>
+    <button class="header_buttons_size">
+        <a class="header_text">
+            Last
+        </a>
+    </button>
+</p>
+
+<div style="display: flex">
+
+    <div class="fieldset_random_quote">
+        <p class="quote_text">
+            Random quote
+        </p>
+    </div>
+
+    <div class="fieldset_profile">
+        <form th:method="POST" class="sign_in_fields">
+            <br>
+            <input type="text" placeholder="Login">
+            <br><br>
+            <input type="password" placeholder="Password">
+            <br><br>
+            <input type="submit" style="position: relative" name="sub" value="Sign in"/>
+            <br><br>
+            <a href="/registration" style="font-size: 15px; position: relative; left: 35px;">Create an account</a>
+        </form>
+    </div>
+</div>
+
+<div th:each="quote : ${quotes}">
+    <div class="fieldset_number_quote">
+        <!--<a style="font-size: 10px;" th:text="Top ${quote.getPlace()} quote - Score"></a>-->
+        <a style="font-size: 15px; vertical-align: sub">
+            &nbsp;&nbsp;&nbsp;&nbsp;Top "1" quote - Score<br>
+        </a>
+        <!--a href="#" style="font-size: 15px; position: absolute; left: 550px; bottom: 400px">posted by Login</a>-->
+        <a href="#" style="font-size: 15px; position: relative; left: 550px; top: 10px">posted by "Login"</a>
+
+        <div style="display: flex">
+            <button class="plus_minus_button"><a>+</a></button>
+            <button class="plus_minus_button"><a>-</a></button>
+        </div>
+    </div>
+    <br>
+
+</body>
+</html>

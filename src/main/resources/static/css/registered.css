@@ -1,0 +1,131 @@
+.fieldset_random_quote {
+    margin-top: 20px;
+    height: 170px;
+    width: 700px;
+    display: inline-block;
+    border:1px solid #555;
+    border-radius:5px;
+    /*width: 1000px;*/
+}
+
+.fieldset_number_quote {
+    position: relative;
+    top:20px;
+    height: 60px;
+    width: 700px;
+    /*display: inline-block;*/
+    border:1px solid #555;
+    border-radius:5px;
+    /*width: 1000px;*/
+}
+
+.fieldset_sign_in {
+    height: 170px;
+    width: 277px;
+    display: inline-block;
+    border:1px solid #555;
+    border-radius:5px;
+    margin: 20px;
+    /*width: 1000px;*/
+}
+
+.general_border{
+    width: 277px;
+    height: 100%;
+}
+
+.fieldset_profile {
+    position: absolute;
+    right: 506px;
+    height: 630px;
+    width: 277px;
+    display: inline-block;
+    border:1px solid #555;
+    border-radius:5px;
+    margin: 20px;
+    /*width: 1000px;*/
+}
+
+.fieldset_profile_last_votes {
+    position: relative;
+    right:7px;
+    top:100px;
+    height: 480px;
+    width: 250px;
+    display: inline-block;
+    border:1px solid #555;
+    border-radius:5px;
+    margin: 20px;
+    /*width: 1000px;*/
+}
+
+.second_fieldset_profile_last_votes {
+    position: relative;
+    right: 15px;
+    top:-15px;
+    height: 470px;
+    width: 240px;
+    display: inline-block;
+    border:0px solid #555;
+    border-radius:5px;
+    margin: 20px;
+    /*width: 1000px;*/
+}
+
+.quote_story_fieldset{
+    position: absolute;
+    right: 505px;
+    height: 400px;
+    width: 277px;
+    display: inline-block;
+    border:1px solid #555;
+    border-radius:5px;
+    margin: 20px;
+}
+
+.fieldset_authenticated {
+
+    height: 400px;
+    width: 277px;
+    display: inline-block;
+    border:1px solid #555;
+    border-radius:5px;
+    margin: 20px;
+    /*width: 1000px;*/
+}
+
+.sign_in_fields{
+    text-align: center;
+}
+
+.header_buttons_border{
+    border:1px solid #555;
+    border-radius:5px;
+    width: 1000px;
+    /*text-align:center;*/
+    /*margin:20px;
+    padding:20px;*/
+}
+
+.header_buttons_size{
+    height:50px;
+    width:100px;
+}
+
+.quote_text{
+    font-size:20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header_text{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.plus_minus_button{
+    margin-top: -15px;
+    margin-left: 15px;
+    height:25px;
+    width:25px;
+}
